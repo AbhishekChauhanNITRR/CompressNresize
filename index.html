@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Resizer and Compressor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- the main container -->
+    <div id="container">
+        <!-- main heading of page -->
+        <h1>Image Resizer and Compressor</h1>
+
+        <!-- image uploading section-->
+        <div id="uploadContainer">
+            <input type="file" name="gettingFile" id="gettingFile" accept="image/*">
+        </div>
+
+        <div id="middleWrapper">
+            <!-- preview of image -->
+            <div id="previewImage">
+                <img id="imagePreview" src="compressing.webp" alt="Preview will appear here">
+            </div>
+            <!-- steps -->
+            <div id="steps">
+                <div class="stepN">1. Upload Your Image</div>
+                <div class="stepN">2. Resize your Photo</div>
+                <div class="stepN">3. Download your Img </div>
+            </div>
+        </div>
+
+        <!-- user inputs for width and height -->
+        <div class="customInputs">
+            <!-- user width -->
+            <label for="customWidth">Width in px:</label>
+            <input type="number" id="customWidth" name="customWidth" placeholder="Enter required Width">
+
+            <br/>
+
+            <!-- user height -->
+            <label for="customHeight">Height in px:</label>
+            <input type="number" id="customHeight" name="customHeight" placeholder="Enter required Height">
+
+            <br/>
+
+            <!-- quality bar -->
+            <label for="qualityBar">Quality: <span id="qualityValue">50</span> </label>
+            <input type="range" id="qualityBar" min="10" max="100" step="10" value="50">
+
+        </div>
+
+        <!-- final buttons -->
+        <div id="buttonSection">
+            <button id="makeChangeButton" class="finalButtons">Make Changes</button>
+            <br/>
+            <button id="downloadButton" class="finalButtons">Download</button>
+        </div>
+
+
+        <!-- canvas -->
+        <canvas id="canvas"></canvas>
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
